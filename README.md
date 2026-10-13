@@ -2,7 +2,7 @@
 
 Review websites with element comments, annotated screenshots, replies, and downloadable HTML reports. This public repository contains desktop releases and illustrated user guides.
 
-[Download the latest release](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [English user guide](docs/wiki/User-Guide.md) · [繁體中文使用指南](docs/wiki/User-Guide-zh-HK.md) · [Admin console](https://html-review-206149277907.asia-east1.run.app/)
+[Download the latest release](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [English user guide](docs/wiki/User-Guide.md) · [繁體中文使用指南](docs/wiki/User-Guide-zh-HK.md)
 
 ## HTML pages
 
@@ -31,7 +31,7 @@ The Windows portable EXE extracts runtime files to a temporary folder when launc
 
 ## Start reviewing
 
-1. Open HTML Review. Version 1.0.1 connects to `https://html-review-206149277907.asia-east1.run.app/` by default.
+1. Open HTML Review. Version 1.0.1 connects to the configured review server by default.
 2. Enter your display name and the reviewer access code supplied by your administrator, then click **Sign in**.
 3. Enter an authorized website URL and click **Open page**.
 4. Click **Start selecting**, then click the element you want to discuss.
@@ -45,7 +45,7 @@ The screenshot uses sample data on a local demo website. For step-by-step instru
 
 ## Access and server connection
 
-Public downloads do not grant access to review data. Ask your administrator for a reviewer access code and authorized website hostnames. Admin console credentials are separate from reviewer codes. Signing in to a reviewed website is also separate.
+Public downloads do not grant access to review data. Ask your administrator for a reviewer access code and authorized website hostnames. Signing in to a reviewed website is also separate.
 
 The packaged app needs a connection to the review server; reviews are shared through that server. Node.js and npm are not needed to use these downloads.
 
@@ -61,7 +61,7 @@ For the Windows portable app in PowerShell:
 .\HTML.Review.Portable.1.0.1-x64.exe --server https://YOUR_REVIEW_SERVER
 ```
 
-Use an HTTPS origin, or an HTTP loopback origin for local development, without credentials, a path, query, or fragment. The desktop app and admin console must connect to the same server.
+Use an HTTPS origin, or an HTTP loopback origin for local development, without credentials, a path, query, or fragment.
 
 ## Package verification and support
 

@@ -2,94 +2,29 @@
 
 **更新日期：2026 年 10 月 13 日 · 版本 1.0.1**
 
-使用**管理員控制台**管理審閱者的存取權限及跟進意見。使用 **Electron 桌面應用程式**瀏覽網站、選取網頁元素，並附上截圖提交留言。兩者連接同一個審閱伺服器，因此已儲存的討論串及回覆會同步顯示。
+使用 **HTML Review 桌面應用程式**瀏覽網站、選取網頁元素，並附上截圖提交留言。已儲存的討論串及回覆會透過審閱伺服器與隊友同步。
 
-以下截圖使用獨立的本機示範環境及示例資料。桌面應用程式的概覽圖片按實際顯示位置合併網站區域及留言區域的截圖。`127.0.0.1` 網址僅供示範；日常使用時，請改用團隊的伺服器及網站網址。指南保留介面上的英文名稱，並附上中文說明，方便對照操作。
+以下截圖使用獨立的本機示範環境及示例資料。桌面應用程式的概覽圖片按實際顯示位置合併網站區域及留言區域的截圖。`127.0.0.1` 網址僅供示範；日常使用時，請改用團隊的網站網址。指南保留介面上的英文名稱，並附上中文說明，方便對照操作。
 
-## 控制台及下載網址
+## 下載應用程式
 
-| 資源 | 網址 |
+請選擇適合你作業系統及處理器的檔案。下載檔案已公開，毋須 GitHub 帳戶。
+
+| 平台 | 直接下載 |
 | --- | --- |
-| 管理員控制台 | [https://html-review-206149277907.asia-east1.run.app/](https://html-review-206149277907.asia-east1.run.app/) |
-| Electron 桌面應用程式 — macOS Apple silicon，v1.0.1 DMG | [https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg) |
-| 最新版本及可用下載檔案 | [https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) |
+| macOS Apple silicon（M 系列） | [HTML.Review-1.0.1-arm64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg) |
+| macOS Intel | [HTML.Review-1.0.1-x64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.dmg) |
+| Windows x64 可攜式版本 — 毋須安裝 | [HTML.Review.Portable.1.0.1-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Portable.1.0.1-x64.exe) |
+| Windows x64 安裝程式 | [HTML.Review.Setup.1.0.1-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Setup.1.0.1-x64.exe) |
+| Linux x64 | [HTML.Review-1.0.1-x64.AppImage](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.AppImage) |
 
-下載檔案已公開，毋須 GitHub 帳戶。上述 DMG 適用於配備 Apple silicon（M 系列晶片）的 Mac；最新版本亦提供 Intel Mac、Windows 及 Linux 下載檔案。
+[最新版本](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [SHA-256 校驗碼](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/SHA256SUMS.txt)
 
 ## 開始前的準備
 
-| 所需資料 | 管理員控制台 | Electron 應用程式 |
-| --- | --- | --- |
-| 審閱伺服器 | 團隊的審閱伺服器網址 | 同一個審閱伺服器網址 |
-| 登入資料 | 管理員用戶名稱及密碼 | 你的顯示名稱及審閱者存取碼 |
-| 網站存取權限 | 管理員可查看所有共用討論串 | 存取碼必須允許該網站的主機名稱 |
+請準備你的顯示名稱、管理員提供的審閱者存取碼，以及存取碼允許的網站網址。你的顯示名稱會出現在留言及回覆上。應用程式會自動連接已設定的審閱伺服器。
 
-已部署的控制台位於 [HTML Review](https://html-review-206149277907.asia-east1.run.app/)。請向管理員索取登入資料或存取碼。你的顯示名稱會出現在留言及回覆上。
-
-**一般流程：**管理員建立存取碼 → 審閱者開啟網站並提交意見 → 團隊回覆 → 問題解決後封存討論串。
-
-## 使用管理員控制台
-
-### 1. 登入
-
-1. 在瀏覽器開啟審閱伺服器網址。
-2. 輸入 **Username**（用戶名稱）及 **Password**（密碼）。
-3. 按 **Log in**（登入）。控制台會開啟 **Reviews**（審閱）頁面。
-
-![管理員控制台登入畫面，顯示用戶名稱及密碼欄位](images/console-login.png)
-
-管理員登入資料與審閱者存取碼是分開的。完成操作後，按右上角的 **Log out**（登出）。
-
-### 2. 建立審閱者存取碼
-
-1. 選擇 **Access codes**（存取碼）。
-2. 在 **Code label**（存取碼標籤）輸入名稱，例如 `Website review team`（網站審閱團隊）。
-3. 在 **Allowed hostnames**（允許的主機名稱）逐一輸入主機名稱，然後按 **Enter**；亦可用逗號分隔多個主機名稱。
-4. 按 **Create code**（建立存取碼），產生六位數字存取碼。
-5. 按 **Show code**（顯示存取碼），私下將存取碼分享給審閱者，再按 **Hide code**（隱藏存取碼）。**Dismiss**（關閉）會關閉新存取碼面板；存取碼仍會保留在 **Existing codes**（現有存取碼）下。
-
-![存取碼頁面，顯示建立表格、主機名稱標籤及已隱藏的存取碼](images/console-access-codes.png)
-
-輸入主機名稱時，不要包含通訊協定（如 `https://`）、連接埠或路徑：
-
-| 規則 | 允許的範圍 |
-| --- | --- |
-| `example.com` | 只允許 `example.com` |
-| `*.example.com` | 允許 `www.example.com`、`staging.example.com` 等子網域；不包括 `example.com` 本身 |
-| `example.com, *.example.com` | 允許主網域及其子網域 |
-
-規則不會區分連接埠。請加入網站重新導向後使用的主機名稱；如網站使用獨立登入主機名稱，亦須按需要加入。
-
-管理現有存取碼：
-
-- 修改標籤或主機名稱標籤後，按 **Save changes**（儲存變更）。按主機名稱標籤上的 **×** 可移除該主機名稱。
-- 按 **Show code** 或 **Hide code**，顯示或隱藏存取碼。
-- **Revoke code**（撤銷存取碼）會取消使用該存取碼的審閱者的存取權限，包括已登入的工作階段。
-- **Resume code**（恢復存取碼）可重新啟用已撤銷的存取碼。
-- 已撤銷的存取碼會提供 **Delete code**（刪除存取碼）選項；確認後會永久刪除。
-
-如果舊存取碼要求輸入原有值，請輸入一次原有存取碼，再按 **Show code**，以恢復顯示／隱藏功能。如果無人知道原有存取碼，請建立新的存取碼作替代。
-
-### 3. 搜尋及閱讀意見
-
-1. 選擇 **Reviews**（審閱）。
-2. 在 **Hostname**（主機名稱）選擇網站，或保留 **All hostnames**（所有主機名稱）。
-3. 在 **Status**（狀態）選擇 **Active**（未封存）、**Archived**（已封存）或 **All**（全部）。
-4. 在 **Sort**（排序）選擇 **Newest first**（最新優先）、**Oldest first**（最舊優先）或 **Recent activity**（最近有更新）。
-5. 選取討論串表格中的一行，在右側開啟詳細資料。
-
-![審閱頁面，顯示篩選器、討論串表格及所選討論串的截圖](images/console-review-thread.png)
-
-每個討論串均包含編號、留言、作者、網站網址、截圖、所選元素的詳細資料及回覆。按 **Refresh**（重新整理）查看最新意見，並使用 **Previous**（上一頁）／**Next**（下一頁）瀏覽結果頁面。
-
-### 4. 回覆及封存
-
-1. 開啟一個未封存的討論串。
-2. 向下捲動詳細資料，找到 **Reply**（回覆）欄位。
-3. 輸入回覆，然後按標示為 **Post reply**（提交回覆）的傳送箭嘴。
-4. 問題解決後，按 **Archive thread**（封存討論串）。
-
-已封存的討論串仍可在 **Status → Archived** 或 **All** 下查看。選取已封存的討論串，按 **Unarchive thread**（取消封存討論串）即可重新開啟。討論串封存期間不能新增回覆。
+**一般流程：**開啟網站 → 選取元素 → 提交意見 → 與隊友回覆討論 → 封存已處理的討論串。
 
 ## 使用 Electron 桌面應用程式
 
@@ -109,7 +44,7 @@ chmod +x HTML.Review-1.0.1-x64.AppImage
 ./HTML.Review-1.0.1-x64.AppImage
 ```
 
-1.0.1 版本預設連接[已部署的審閱伺服器](https://html-review-206149277907.asia-east1.run.app/)，毋須安裝 Node.js、npm 或透過指令指定伺服器。請向管理員索取審閱者存取碼。應用程式與管理員控制台必須連接同一個伺服器。
+1.0.1 版本預設連接已設定的審閱伺服器，毋須安裝 Node.js、npm 或透過指令指定伺服器。請向管理員索取審閱者存取碼。
 
 macOS 套件使用 ad-hoc 簽署，未經 Apple 公證；Windows 套件沒有發行者憑證。作業系統可能顯示安全提示。Windows 及 Linux 版本尚未在各自的作業系統上測試。
 
@@ -226,7 +161,6 @@ Windows 可攜式版本可於 PowerShell 使用：
 
 | 問題 | 處理方法 |
 | --- | --- |
-| 無法登入控制台 | 向管理員核對伺服器網址、管理員用戶名稱及密碼。審閱者存取碼不能用作管理員登入。 |
 | 審閱者存取碼被拒絕 | 向管理員核對存取碼及伺服器網址。存取碼可能已被撤銷。 |
 | 主機名稱未獲授權 | 請管理員將確切的主機名稱加入你的存取碼，包括重新導向或登入使用的主機名稱。修改後重新開啟網頁。 |
 | Start selecting 無法使用 | 等候網站載入，查看狀態訊息，再按 Open page 重試。 |

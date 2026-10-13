@@ -2,94 +2,29 @@
 
 **Updated 13 October 2026 · Version 1.0.1**
 
-Use the **admin console** to manage reviewer access and follow up on feedback. Use the **Electron desktop app** to browse a website, select an element, and post a comment with a screenshot. Both connect to the same review server, so saved threads and replies are shared.
+Use the **HTML Review desktop app** to browse a website, select an element, and post a comment with a screenshot. Saved threads and replies are shared with your team through the review server.
 
-Screenshots below show an isolated local demo with sample data. Desktop overview images combine captures of the app's website and comments views at their displayed positions. The `127.0.0.1` addresses are demo addresses; use your team's server and website URLs for everyday work.
+Screenshots below show an isolated local demo with sample data. Desktop overview images combine captures of the app's website and comments views at their displayed positions. The `127.0.0.1` addresses are demo addresses; use your team's website URLs for everyday work.
 
-## Console and download URLs
+## Download the app
 
-| Resource | URL |
+Choose the package matching your operating system and processor. Downloads are public; no GitHub account is required.
+
+| Platform | Direct download |
 | --- | --- |
-| Admin console | [https://html-review-206149277907.asia-east1.run.app/](https://html-review-206149277907.asia-east1.run.app/) |
-| Electron desktop app — macOS Apple silicon, v1.0.1 DMG | [https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg) |
-| Latest release and available downloads | [https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) |
+| macOS Apple silicon (M series) | [HTML.Review-1.0.1-arm64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg) |
+| macOS Intel | [HTML.Review-1.0.1-x64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.dmg) |
+| Windows x64 portable — no installation | [HTML.Review.Portable.1.0.1-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Portable.1.0.1-x64.exe) |
+| Windows x64 installer | [HTML.Review.Setup.1.0.1-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Setup.1.0.1-x64.exe) |
+| Linux x64 | [HTML.Review-1.0.1-x64.AppImage](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.AppImage) |
 
-Downloads are public; no GitHub account is required. The listed DMG is for Macs with Apple silicon (M series). Intel Mac, Windows and Linux downloads are available in the latest release.
+[Latest release](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [SHA-256 checksums](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/SHA256SUMS.txt)
 
 ## Before you begin
 
-| What you need | Admin console | Electron app |
-| --- | --- | --- |
-| Review server | Your team's review server URL | The same review server URL |
-| Sign in details | Admin username and password | Your display name and a reviewer access code |
-| Website access | Admins can view all shared review threads | Your code must allow the website hostname |
+You need your display name, a reviewer access code supplied by your administrator, and a website URL authorized by that code. Your display name appears on your comments and replies. The app connects to the configured review server automatically.
 
-The deployed console is at [HTML Review](https://html-review-206149277907.asia-east1.run.app/). Ask your administrator for credentials or an access code. Your display name appears on your comments and replies.
-
-**Typical workflow:** an admin creates a code → a reviewer opens a website and posts feedback → the team replies → a resolved thread is archived.
-
-## Use the admin console
-
-### 1. Sign in
-
-1. Open the review server URL in your browser.
-2. Enter your **Username** and **Password**.
-3. Click **Log in**. The console opens the **Reviews** section.
-
-![Admin console login with username and password fields](images/console-login.png)
-
-Admin credentials are separate from reviewer access codes. Use **Log out** in the top right when finished.
-
-### 2. Create a reviewer access code
-
-1. Select **Access codes**.
-2. Enter a **Code label**, such as `Website review team`.
-3. Under **Allowed hostnames**, enter each hostname and press **Enter**, or separate hostnames with commas.
-4. Click **Create code** to generate a six digit code.
-5. Click **Show code**, share the code privately with reviewers, then use **Hide code**. **Dismiss** closes the new code panel; the code remains under **Existing codes**.
-
-![Access codes section showing the creation form, hostname chips, and hidden code values](images/console-access-codes.png)
-
-Enter hostnames without a scheme, port, or path:
-
-| Rule | Allows |
-| --- | --- |
-| `example.com` | Only `example.com` |
-| `*.example.com` | Subdomains such as `www.example.com` and `staging.example.com`; excludes `example.com` itself |
-| `example.com, *.example.com` | The main hostname and its subdomains |
-
-Rules ignore ports. Add any hostname a website redirects to, including a separate sign in hostname when needed.
-
-For an existing code:
-
-- Edit its label or hostname chips, then click **Save changes**. Click a chip's **×** to remove a hostname.
-- Use **Show code** and **Hide code** to reveal or conceal its value.
-- **Revoke code** removes access for reviewers using that code, including existing sessions.
-- **Resume code** makes a revoked code usable again.
-- **Delete code** is available for revoked codes and permanently removes the code after confirmation.
-
-For an older code that asks for its original value, enter that value once and click **Show code** to restore Show / Hide. If nobody knows the original, create a replacement code.
-
-### 3. Find and read feedback
-
-1. Select **Reviews**.
-2. Choose a **Hostname**, or leave **All hostnames** selected.
-3. Choose **Active**, **Archived**, or **All** under **Status**.
-4. Choose **Newest first**, **Oldest first**, or **Recent activity** under **Sort**.
-5. Select a row in the thread table to open its details on the right.
-
-![Reviews section with filters, a thread table, and the selected thread screenshot](images/console-review-thread.png)
-
-Each thread includes its number, comment, author, website URL, screenshot, selected element details, and replies. Use **Refresh** for new feedback and **Previous** / **Next** to move through result pages.
-
-### 4. Reply and archive
-
-1. Open an active thread.
-2. Scroll through the details to the **Reply** field.
-3. Write your response and click the send arrow, labeled **Post reply**.
-4. When the issue is resolved, click **Archive thread**.
-
-Archived threads remain available under **Status → Archived** or **All**. Select an archived thread and click **Unarchive thread** to reopen it. Replies are disabled while a thread is archived.
+**Typical workflow:** open a website → select an element → post feedback → reply with your team → archive resolved threads.
 
 ## Use the Electron desktop app
 
@@ -109,7 +44,7 @@ chmod +x HTML.Review-1.0.1-x64.AppImage
 ./HTML.Review-1.0.1-x64.AppImage
 ```
 
-Version 1.0.1 connects to [the hosted review server](https://html-review-206149277907.asia-east1.run.app/) by default. You do not need Node.js, npm, or a command-line server argument. Ask your administrator for a reviewer access code. The app and admin console must use the same server.
+Version 1.0.1 connects to the configured review server by default. You do not need Node.js, npm, or a command-line server argument. Ask your administrator for a reviewer access code.
 
 macOS packages are ad-hoc signed and not notarized; Windows packages have no publisher certificate. Your operating system may show a security prompt. Windows and Linux builds have not been tested on their native operating systems.
 
@@ -226,7 +161,6 @@ Export includes all matching result pages, along with screenshots and replies. T
 
 | Problem | What to do |
 | --- | --- |
-| Cannot sign in to the console | Check the server URL and admin username/password with your administrator. Reviewer codes do not work for admin login. |
 | Reviewer code is rejected | Confirm the code and server URL with the administrator. The code may have been revoked. |
 | Hostname is not authorized | Ask an admin to add the exact hostname, including any redirect or login hostname, to your code. Reopen the page after the change. |
 | Start selecting is disabled | Wait for the website to load. Check the status message, then use Open page to retry. |

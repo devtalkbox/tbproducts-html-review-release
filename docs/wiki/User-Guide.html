@@ -9,18 +9,16 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="../../index.html">HTML Review</a><nav aria-label="Guide navigation"><a href="../../index.html#downloads">Downloads</a><a href="User-Guide.html" lang="en">English</a><a href="User-Guide-zh-HK.html" lang="zh-HK">繁體中文</a><a href="https://html-review-206149277907.asia-east1.run.app/">Admin console</a></nav></div></header>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../../index.html">HTML Review</a><nav aria-label="Guide navigation"><a href="../../index.html#downloads">Downloads</a><a href="User-Guide.html" lang="en">English</a><a href="User-Guide-zh-HK.html" lang="zh-HK">繁體中文</a></nav></div></header>
 <main class="guide" id="main">
 <nav id="TOC" aria-label="Table of contents"><ul>
 <li><a href="#html-review-user-guide"
 id="toc-html-review-user-guide">HTML Review User Guide</a>
 <ul>
-<li><a href="#console-and-download-urls"
-id="toc-console-and-download-urls">Console and download URLs</a></li>
+<li><a href="#download-the-app" id="toc-download-the-app">Download the
+app</a></li>
 <li><a href="#before-you-begin" id="toc-before-you-begin">Before you
 begin</a></li>
-<li><a href="#use-the-admin-console" id="toc-use-the-admin-console">Use
-the admin console</a></li>
 <li><a href="#use-the-electron-desktop-app"
 id="toc-use-the-electron-desktop-app">Use the Electron desktop
 app</a></li>
@@ -30,17 +28,17 @@ id="toc-troubleshooting">Troubleshooting</a></li>
 </ul></nav>
 <h1 id="html-review-user-guide">HTML Review User Guide</h1>
 <p><strong>Updated 13 October 2026 · Version 1.0.1</strong></p>
-<p>Use the <strong>admin console</strong> to manage reviewer access and
-follow up on feedback. Use the <strong>Electron desktop app</strong> to
-browse a website, select an element, and post a comment with a
-screenshot. Both connect to the same review server, so saved threads and
-replies are shared.</p>
+<p>Use the <strong>HTML Review desktop app</strong> to browse a website,
+select an element, and post a comment with a screenshot. Saved threads
+and replies are shared with your team through the review server.</p>
 <p>Screenshots below show an isolated local demo with sample data.
 Desktop overview images combine captures of the app’s website and
 comments views at their displayed positions. The <code>127.0.0.1</code>
-addresses are demo addresses; use your team’s server and website URLs
-for everyday work.</p>
-<h2 id="console-and-download-urls">Console and download URLs</h2>
+addresses are demo addresses; use your team’s website URLs for everyday
+work.</p>
+<h2 id="download-the-app">Download the app</h2>
+<p>Choose the package matching your operating system and processor.
+Downloads are public; no GitHub account is required.</p>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -48,190 +46,50 @@ for everyday work.</p>
 </colgroup>
 <thead>
 <tr>
-<th>Resource</th>
-<th>URL</th>
+<th>Platform</th>
+<th>Direct download</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Admin console</td>
+<td>macOS Apple silicon (M series)</td>
 <td><a
-href="https://html-review-206149277907.asia-east1.run.app/">https://html-review-206149277907.asia-east1.run.app/</a></td>
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg">HTML.Review-1.0.1-arm64.dmg</a></td>
 </tr>
 <tr>
-<td>Electron desktop app — macOS Apple silicon, v1.0.1 DMG</td>
+<td>macOS Intel</td>
 <td><a
-href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg">https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg</a></td>
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.dmg">HTML.Review-1.0.1-x64.dmg</a></td>
 </tr>
 <tr>
-<td>Latest release and available downloads</td>
+<td>Windows x64 portable — no installation</td>
 <td><a
-href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest">https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest</a></td>
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Portable.1.0.1-x64.exe">HTML.Review.Portable.1.0.1-x64.exe</a></td>
+</tr>
+<tr>
+<td>Windows x64 installer</td>
+<td><a
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Setup.1.0.1-x64.exe">HTML.Review.Setup.1.0.1-x64.exe</a></td>
+</tr>
+<tr>
+<td>Linux x64</td>
+<td><a
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.AppImage">HTML.Review-1.0.1-x64.AppImage</a></td>
 </tr>
 </tbody>
 </table>
-<p>Downloads are public; no GitHub account is required. The listed DMG
-is for Macs with Apple silicon (M series). Intel Mac, Windows and Linux
-downloads are available in the latest release.</p>
+<p><a
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest">Latest
+release</a> · <a
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/SHA256SUMS.txt">SHA-256
+checksums</a></p>
 <h2 id="before-you-begin">Before you begin</h2>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What you need</th>
-<th>Admin console</th>
-<th>Electron app</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Review server</td>
-<td>Your team’s review server URL</td>
-<td>The same review server URL</td>
-</tr>
-<tr>
-<td>Sign in details</td>
-<td>Admin username and password</td>
-<td>Your display name and a reviewer access code</td>
-</tr>
-<tr>
-<td>Website access</td>
-<td>Admins can view all shared review threads</td>
-<td>Your code must allow the website hostname</td>
-</tr>
-</tbody>
-</table>
-<p>The deployed console is at <a
-href="https://html-review-206149277907.asia-east1.run.app/">HTML
-Review</a>. Ask your administrator for credentials or an access code.
-Your display name appears on your comments and replies.</p>
-<p><strong>Typical workflow:</strong> an admin creates a code → a
-reviewer opens a website and posts feedback → the team replies → a
-resolved thread is archived.</p>
-<h2 id="use-the-admin-console">Use the admin console</h2>
-<h3 id="sign-in">1. Sign in</h3>
-<ol type="1">
-<li>Open the review server URL in your browser.</li>
-<li>Enter your <strong>Username</strong> and
-<strong>Password</strong>.</li>
-<li>Click <strong>Log in</strong>. The console opens the
-<strong>Reviews</strong> section.</li>
-</ol>
-<figure>
-<img src="images/console-login.png"
-alt="Admin console login with username and password fields" />
-<figcaption aria-hidden="true">Admin console login with username and
-password fields</figcaption>
-</figure>
-<p>Admin credentials are separate from reviewer access codes. Use
-<strong>Log out</strong> in the top right when finished.</p>
-<h3 id="create-a-reviewer-access-code">2. Create a reviewer access
-code</h3>
-<ol type="1">
-<li>Select <strong>Access codes</strong>.</li>
-<li>Enter a <strong>Code label</strong>, such as
-<code>Website review team</code>.</li>
-<li>Under <strong>Allowed hostnames</strong>, enter each hostname and
-press <strong>Enter</strong>, or separate hostnames with commas.</li>
-<li>Click <strong>Create code</strong> to generate a six digit
-code.</li>
-<li>Click <strong>Show code</strong>, share the code privately with
-reviewers, then use <strong>Hide code</strong>. <strong>Dismiss</strong>
-closes the new code panel; the code remains under <strong>Existing
-codes</strong>.</li>
-</ol>
-<figure>
-<img src="images/console-access-codes.png"
-alt="Access codes section showing the creation form, hostname chips, and hidden code values" />
-<figcaption aria-hidden="true">Access codes section showing the creation
-form, hostname chips, and hidden code values</figcaption>
-</figure>
-<p>Enter hostnames without a scheme, port, or path:</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr>
-<th>Rule</th>
-<th>Allows</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>example.com</code></td>
-<td>Only <code>example.com</code></td>
-</tr>
-<tr>
-<td><code>*.example.com</code></td>
-<td>Subdomains such as <code>www.example.com</code> and
-<code>staging.example.com</code>; excludes <code>example.com</code>
-itself</td>
-</tr>
-<tr>
-<td><code>example.com, *.example.com</code></td>
-<td>The main hostname and its subdomains</td>
-</tr>
-</tbody>
-</table>
-<p>Rules ignore ports. Add any hostname a website redirects to,
-including a separate sign in hostname when needed.</p>
-<p>For an existing code:</p>
-<ul>
-<li>Edit its label or hostname chips, then click <strong>Save
-changes</strong>. Click a chip’s <strong>×</strong> to remove a
-hostname.</li>
-<li>Use <strong>Show code</strong> and <strong>Hide code</strong> to
-reveal or conceal its value.</li>
-<li><strong>Revoke code</strong> removes access for reviewers using that
-code, including existing sessions.</li>
-<li><strong>Resume code</strong> makes a revoked code usable again.</li>
-<li><strong>Delete code</strong> is available for revoked codes and
-permanently removes the code after confirmation.</li>
-</ul>
-<p>For an older code that asks for its original value, enter that value
-once and click <strong>Show code</strong> to restore Show / Hide. If
-nobody knows the original, create a replacement code.</p>
-<h3 id="find-and-read-feedback">3. Find and read feedback</h3>
-<ol type="1">
-<li>Select <strong>Reviews</strong>.</li>
-<li>Choose a <strong>Hostname</strong>, or leave <strong>All
-hostnames</strong> selected.</li>
-<li>Choose <strong>Active</strong>, <strong>Archived</strong>, or
-<strong>All</strong> under <strong>Status</strong>.</li>
-<li>Choose <strong>Newest first</strong>, <strong>Oldest first</strong>,
-or <strong>Recent activity</strong> under <strong>Sort</strong>.</li>
-<li>Select a row in the thread table to open its details on the
-right.</li>
-</ol>
-<figure>
-<img src="images/console-review-thread.png"
-alt="Reviews section with filters, a thread table, and the selected thread screenshot" />
-<figcaption aria-hidden="true">Reviews section with filters, a thread
-table, and the selected thread screenshot</figcaption>
-</figure>
-<p>Each thread includes its number, comment, author, website URL,
-screenshot, selected element details, and replies. Use
-<strong>Refresh</strong> for new feedback and <strong>Previous</strong>
-/ <strong>Next</strong> to move through result pages.</p>
-<h3 id="reply-and-archive">4. Reply and archive</h3>
-<ol type="1">
-<li>Open an active thread.</li>
-<li>Scroll through the details to the <strong>Reply</strong> field.</li>
-<li>Write your response and click the send arrow, labeled <strong>Post
-reply</strong>.</li>
-<li>When the issue is resolved, click <strong>Archive
-thread</strong>.</li>
-</ol>
-<p>Archived threads remain available under <strong>Status →
-Archived</strong> or <strong>All</strong>. Select an archived thread and
-click <strong>Unarchive thread</strong> to reopen it. Replies are
-disabled while a thread is archived.</p>
+<p>You need your display name, a reviewer access code supplied by your
+administrator, and a website URL authorized by that code. Your display
+name appears on your comments and replies. The app connects to the
+configured review server automatically.</p>
+<p><strong>Typical workflow:</strong> open a website → select an element
+→ post feedback → reply with your team → archive resolved threads.</p>
 <h2 id="use-the-electron-desktop-app">Use the Electron desktop app</h2>
 <h3 id="launch-the-app">1. Launch the app</h3>
 <p>Download the package for your operating system from the <a
@@ -273,11 +131,9 @@ folder.</td>
 </table>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x HTML.Review-1.0.1-x64.AppImage</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./HTML.Review-1.0.1-x64.AppImage</span></span></code></pre></div>
-<p>Version 1.0.1 connects to <a
-href="https://html-review-206149277907.asia-east1.run.app/">the hosted
-review server</a> by default. You do not need Node.js, npm, or a
-command-line server argument. Ask your administrator for a reviewer
-access code. The app and admin console must use the same server.</p>
+<p>Version 1.0.1 connects to the configured review server by default.
+You do not need Node.js, npm, or a command-line server argument. Ask
+your administrator for a reviewer access code.</p>
 <p>macOS packages are ad-hoc signed and not notarized; Windows packages
 have no publisher certificate. Your operating system may show a security
 prompt. Windows and Linux builds have not been tested on their native
@@ -518,11 +374,6 @@ screenshots; share them only with the intended recipients.</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Cannot sign in to the console</td>
-<td>Check the server URL and admin username/password with your
-administrator. Reviewer codes do not work for admin login.</td>
-</tr>
 <tr>
 <td>Reviewer code is rejected</td>
 <td>Confirm the code and server URL with the administrator. The code may
