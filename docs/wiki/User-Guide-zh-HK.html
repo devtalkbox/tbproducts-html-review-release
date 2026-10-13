@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Review 使用指南</title>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../../index.html">HTML Review</a><nav aria-label="Guide navigation"><a href="../../index.html#downloads">Downloads</a><a href="User-Guide.html" lang="en">English</a><a href="User-Guide-zh-HK.html" lang="zh-HK">繁體中文</a><a href="https://html-review-206149277907.asia-east1.run.app/">Admin console</a></nav></div></header>
+<main class="guide" id="main">
+<nav id="TOC" aria-label="Table of contents"><ul>
+<li><a href="#html-review-使用指南" id="toc-html-review-使用指南">HTML
+Review 使用指南</a>
+<ul>
+<li><a href="#控制台及下載網址"
+id="toc-控制台及下載網址">控制台及下載網址</a></li>
+<li><a href="#開始前的準備" id="toc-開始前的準備">開始前的準備</a></li>
+<li><a href="#使用管理員控制台"
+id="toc-使用管理員控制台">使用管理員控制台</a></li>
+<li><a href="#使用-electron-桌面應用程式"
+id="toc-使用-electron-桌面應用程式">使用 Electron 桌面應用程式</a></li>
+<li><a href="#疑難排解" id="toc-疑難排解">疑難排解</a></li>
+</ul></li>
+</ul></nav>
+<h1 id="html-review-使用指南">HTML Review 使用指南</h1>
+<p><strong>更新日期：2026 年 10 月 13 日 · 版本 1.0.1</strong></p>
+<p>使用<strong>管理員控制台</strong>管理審閱者的存取權限及跟進意見。使用
+<strong>Electron
+桌面應用程式</strong>瀏覽網站、選取網頁元素，並附上截圖提交留言。兩者連接同一個審閱伺服器，因此已儲存的討論串及回覆會同步顯示。</p>
+<p>以下截圖使用獨立的本機示範環境及示例資料。桌面應用程式的概覽圖片按實際顯示位置合併網站區域及留言區域的截圖。<code>127.0.0.1</code>
+網址僅供示範；日常使用時，請改用團隊的伺服器及網站網址。指南保留介面上的英文名稱，並附上中文說明，方便對照操作。</p>
+<h2 id="控制台及下載網址">控制台及下載網址</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>資源</th>
+<th>網址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理員控制台</td>
+<td><a
+href="https://html-review-206149277907.asia-east1.run.app/">https://html-review-206149277907.asia-east1.run.app/</a></td>
+</tr>
+<tr>
+<td>Electron 桌面應用程式 — macOS Apple silicon，v1.0.1 DMG</td>
+<td><a
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg">https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg</a></td>
+</tr>
+<tr>
+<td>最新版本及可用下載檔案</td>
+<td><a
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest">https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest</a></td>
+</tr>
+</tbody>
+</table>
+<p>下載檔案已公開，毋須 GitHub 帳戶。上述 DMG 適用於配備 Apple
+silicon（M 系列晶片）的 Mac；最新版本亦提供 Intel Mac、Windows 及 Linux
+下載檔案。</p>
+<h2 id="開始前的準備">開始前的準備</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>所需資料</th>
+<th>管理員控制台</th>
+<th>Electron 應用程式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>審閱伺服器</td>
+<td>團隊的審閱伺服器網址</td>
+<td>同一個審閱伺服器網址</td>
+</tr>
+<tr>
+<td>登入資料</td>
+<td>管理員用戶名稱及密碼</td>
+<td>你的顯示名稱及審閱者存取碼</td>
+</tr>
+<tr>
+<td>網站存取權限</td>
+<td>管理員可查看所有共用討論串</td>
+<td>存取碼必須允許該網站的主機名稱</td>
+</tr>
+</tbody>
+</table>
+<p>已部署的控制台位於 <a
+href="https://html-review-206149277907.asia-east1.run.app/">HTML
+Review</a>。請向管理員索取登入資料或存取碼。你的顯示名稱會出現在留言及回覆上。</p>
+<p><strong>一般流程：</strong>管理員建立存取碼 →
+審閱者開啟網站並提交意見 → 團隊回覆 → 問題解決後封存討論串。</p>
+<h2 id="使用管理員控制台">使用管理員控制台</h2>
+<h3 id="登入">1. 登入</h3>
+<ol type="1">
+<li>在瀏覽器開啟審閱伺服器網址。</li>
+<li>輸入 <strong>Username</strong>（用戶名稱）及
+<strong>Password</strong>（密碼）。</li>
+<li>按 <strong>Log in</strong>（登入）。控制台會開啟
+<strong>Reviews</strong>（審閱）頁面。</li>
+</ol>
+<figure>
+<img src="images/console-login.png"
+alt="管理員控制台登入畫面，顯示用戶名稱及密碼欄位" />
+<figcaption
+aria-hidden="true">管理員控制台登入畫面，顯示用戶名稱及密碼欄位</figcaption>
+</figure>
+<p>管理員登入資料與審閱者存取碼是分開的。完成操作後，按右上角的
+<strong>Log out</strong>（登出）。</p>
+<h3 id="建立審閱者存取碼">2. 建立審閱者存取碼</h3>
+<ol type="1">
+<li>選擇 <strong>Access codes</strong>（存取碼）。</li>
+<li>在 <strong>Code label</strong>（存取碼標籤）輸入名稱，例如
+<code>Website review team</code>（網站審閱團隊）。</li>
+<li>在 <strong>Allowed
+hostnames</strong>（允許的主機名稱）逐一輸入主機名稱，然後按
+<strong>Enter</strong>；亦可用逗號分隔多個主機名稱。</li>
+<li>按 <strong>Create
+code</strong>（建立存取碼），產生六位數字存取碼。</li>
+<li>按 <strong>Show
+code</strong>（顯示存取碼），私下將存取碼分享給審閱者，再按 <strong>Hide
+code</strong>（隱藏存取碼）。<strong>Dismiss</strong>（關閉）會關閉新存取碼面板；存取碼仍會保留在
+<strong>Existing codes</strong>（現有存取碼）下。</li>
+</ol>
+<figure>
+<img src="images/console-access-codes.png"
+alt="存取碼頁面，顯示建立表格、主機名稱標籤及已隱藏的存取碼" />
+<figcaption
+aria-hidden="true">存取碼頁面，顯示建立表格、主機名稱標籤及已隱藏的存取碼</figcaption>
+</figure>
+<p>輸入主機名稱時，不要包含通訊協定（如
+<code>https://</code>）、連接埠或路徑：</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>規則</th>
+<th>允許的範圍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>example.com</code></td>
+<td>只允許 <code>example.com</code></td>
+</tr>
+<tr>
+<td><code>*.example.com</code></td>
+<td>允許 <code>www.example.com</code>、<code>staging.example.com</code>
+等子網域；不包括 <code>example.com</code> 本身</td>
+</tr>
+<tr>
+<td><code>example.com, *.example.com</code></td>
+<td>允許主網域及其子網域</td>
+</tr>
+</tbody>
+</table>
+<p>規則不會區分連接埠。請加入網站重新導向後使用的主機名稱；如網站使用獨立登入主機名稱，亦須按需要加入。</p>
+<p>管理現有存取碼：</p>
+<ul>
+<li>修改標籤或主機名稱標籤後，按 <strong>Save
+changes</strong>（儲存變更）。按主機名稱標籤上的 <strong>×</strong>
+可移除該主機名稱。</li>
+<li>按 <strong>Show code</strong> 或 <strong>Hide
+code</strong>，顯示或隱藏存取碼。</li>
+<li><strong>Revoke
+code</strong>（撤銷存取碼）會取消使用該存取碼的審閱者的存取權限，包括已登入的工作階段。</li>
+<li><strong>Resume
+code</strong>（恢復存取碼）可重新啟用已撤銷的存取碼。</li>
+<li>已撤銷的存取碼會提供 <strong>Delete
+code</strong>（刪除存取碼）選項；確認後會永久刪除。</li>
+</ul>
+<p>如果舊存取碼要求輸入原有值，請輸入一次原有存取碼，再按 <strong>Show
+code</strong>，以恢復顯示／隱藏功能。如果無人知道原有存取碼，請建立新的存取碼作替代。</p>
+<h3 id="搜尋及閱讀意見">3. 搜尋及閱讀意見</h3>
+<ol type="1">
+<li>選擇 <strong>Reviews</strong>（審閱）。</li>
+<li>在 <strong>Hostname</strong>（主機名稱）選擇網站，或保留 <strong>All
+hostnames</strong>（所有主機名稱）。</li>
+<li>在 <strong>Status</strong>（狀態）選擇
+<strong>Active</strong>（未封存）、<strong>Archived</strong>（已封存）或
+<strong>All</strong>（全部）。</li>
+<li>在 <strong>Sort</strong>（排序）選擇 <strong>Newest
+first</strong>（最新優先）、<strong>Oldest first</strong>（最舊優先）或
+<strong>Recent activity</strong>（最近有更新）。</li>
+<li>選取討論串表格中的一行，在右側開啟詳細資料。</li>
+</ol>
+<figure>
+<img src="images/console-review-thread.png"
+alt="審閱頁面，顯示篩選器、討論串表格及所選討論串的截圖" />
+<figcaption
+aria-hidden="true">審閱頁面，顯示篩選器、討論串表格及所選討論串的截圖</figcaption>
+</figure>
+<p>每個討論串均包含編號、留言、作者、網站網址、截圖、所選元素的詳細資料及回覆。按
+<strong>Refresh</strong>（重新整理）查看最新意見，並使用
+<strong>Previous</strong>（上一頁）／<strong>Next</strong>（下一頁）瀏覽結果頁面。</p>
+<h3 id="回覆及封存">4. 回覆及封存</h3>
+<ol type="1">
+<li>開啟一個未封存的討論串。</li>
+<li>向下捲動詳細資料，找到 <strong>Reply</strong>（回覆）欄位。</li>
+<li>輸入回覆，然後按標示為 <strong>Post
+reply</strong>（提交回覆）的傳送箭嘴。</li>
+<li>問題解決後，按 <strong>Archive thread</strong>（封存討論串）。</li>
+</ol>
+<p>已封存的討論串仍可在 <strong>Status → Archived</strong> 或
+<strong>All</strong> 下查看。選取已封存的討論串，按 <strong>Unarchive
+thread</strong>（取消封存討論串）即可重新開啟。討論串封存期間不能新增回覆。</p>
+<h2 id="使用-electron-桌面應用程式">使用 Electron 桌面應用程式</h2>
+<h3 id="啟動應用程式">1. 啟動應用程式</h3>
+<p>從<a
+href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest">最新公開版本</a>下載適合你作業系統的檔案。</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>平台</th>
+<th>啟動方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOS Apple silicon 或 Intel</td>
+<td>開啟相應的 DMG，將 <strong>HTML Review</strong> 拖曳至
+<strong>Applications</strong>（應用程式），然後開啟。</td>
+</tr>
+<tr>
+<td>Windows x64 可攜式版本</td>
+<td>按兩下
+<code>HTML.Review.Portable.1.0.1-x64.exe</code>，毋須安裝；執行時會將所需檔案解壓至暫存資料夾。</td>
+</tr>
+<tr>
+<td>Windows x64 安裝程式</td>
+<td>執行 <code>HTML.Review.Setup.1.0.1-x64.exe</code>，完成後開啟
+<strong>HTML Review</strong>。</td>
+</tr>
+<tr>
+<td>Linux x64</td>
+<td>按以下指令將 AppImage 設為可執行並啟動。</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x HTML.Review-1.0.1-x64.AppImage</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./HTML.Review-1.0.1-x64.AppImage</span></span></code></pre></div>
+<p>1.0.1 版本預設連接<a
+href="https://html-review-206149277907.asia-east1.run.app/">已部署的審閱伺服器</a>，毋須安裝
+Node.js、npm
+或透過指令指定伺服器。請向管理員索取審閱者存取碼。應用程式與管理員控制台必須連接同一個伺服器。</p>
+<p>macOS 套件使用 ad-hoc 簽署，未經 Apple 公證；Windows
+套件沒有發行者憑證。作業系統可能顯示安全提示。Windows 及 Linux
+版本尚未在各自的作業系統上測試。</p>
+<p>如要連接其他伺服器，可於啟動時加入 <code>--server</code>，或設定
+<code>REVIEW_SERVER_URL</code>。已安裝的 macOS 應用程式可使用：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">open</span> <span class="at">-a</span> <span class="st">&quot;HTML Review&quot;</span> <span class="at">--args</span> <span class="at">--server</span> https://YOUR_REVIEW_SERVER</span></code></pre></div>
+<p>Windows 可攜式版本可於 PowerShell 使用：</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">.</span>\HTML<span class="op">.</span><span class="fu">Review</span><span class="op">.</span><span class="fu">Portable</span><span class="op">.</span><span class="dv">1.0</span><span class="op">.</span><span class="dv">1</span><span class="op">-</span>x64<span class="op">.</span><span class="fu">exe</span> <span class="op">--</span>server https<span class="op">://</span>YOUR_REVIEW_SERVER</span></code></pre></div>
+<p>伺服器網址必須使用 HTTPS；本機開發亦可使用 HTTP
+回送位址（loopback）。網址不可包含帳戶資料、路徑、查詢參數或片段識別碼。套件及校驗碼詳情請參閱<a
+href="../../index.html">下載及設定 README</a>。</p>
+<h3 id="以審閱者身分登入">2. 以審閱者身分登入</h3>
+<ol type="1">
+<li>在 <strong>Your name</strong>（你的名稱）輸入隊友能辨認的名稱。</li>
+<li>在 <strong>Auth code</strong>（驗證碼）輸入管理員提供的存取碼。</li>
+<li>按 <strong>Sign in</strong>（登入）。</li>
+</ol>
+<figure>
+<img src="images/electron-login.png"
+alt="Electron 審閱者登入畫面，顯示名稱、驗證碼及登入按鈕" />
+<figcaption aria-hidden="true">Electron
+審閱者登入畫面，顯示名稱、驗證碼及登入按鈕</figcaption>
+</figure>
+<p>重新啟動應用程式後，系統會保留審閱者登入狀態。登入工作階段會在 24
+小時後到期；收到提示時，請重新登入。網站本身的登入是獨立的：如果被審閱的網站需要帳戶，請在應用程式內登入該網站。</p>
+<h3 id="開啟網站">3. 開啟網站</h3>
+<ol type="1">
+<li>在網址列輸入完整網站網址，例如
+<code>https://staging.example.com</code>。</li>
+<li>按網址列末端標示為 <strong>Open
+page</strong>（開啟網頁）的箭嘴。</li>
+<li>等候網頁載入。左側會顯示網站，右側會顯示留言。</li>
+</ol>
+<figure>
+<img src="images/electron-workspace.png"
+alt="Electron 工作區，左側顯示網站，右側顯示審閱控制項" />
+<figcaption aria-hidden="true">Electron
+工作區，左側顯示網站，右側顯示審閱控制項</figcaption>
+</figure>
+<p>桌面應用程式會直接開啟網站；網站毋須安裝審閱程式碼，亦毋須允許透過
+iframe 嵌入。</p>
+<p>將滑鼠指標停留在圖示按鈕上，即可查看按鈕名稱：</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>位置</th>
+<th>控制項</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>網址列</td>
+<td>Previous page / Next page（上一頁／下一頁）</td>
+<td>在應用程式內已開啟的網頁之間切換</td>
+</tr>
+<tr>
+<td>網址列</td>
+<td>Refresh page（重新整理網頁）</td>
+<td>重新載入網站</td>
+</tr>
+<tr>
+<td>網址列</td>
+<td>History（瀏覽記錄）</td>
+<td>重新開啟曾瀏覽的網址</td>
+</tr>
+<tr>
+<td>網址列</td>
+<td>Hide comments / Show comments（隱藏／顯示留言）</td>
+<td>切換留言面板的顯示狀態</td>
+</tr>
+<tr>
+<td>網址列</td>
+<td>Sign out（登出）</td>
+<td>結束審閱者登入工作階段</td>
+</tr>
+<tr>
+<td>留言工具列</td>
+<td>指標圖示 — Start selecting（開始選取）</td>
+<td>選取要留言的網頁元素</td>
+</tr>
+<tr>
+<td>留言工具列</td>
+<td>對話框圖示 — Highlight commented elements（標示已有留言的元素）</td>
+<td>標示目前網頁上有未封存留言的元素</td>
+</tr>
+<tr>
+<td>留言工具列</td>
+<td>下載箭嘴 — Export（匯出）</td>
+<td>下載 HTML 報告</td>
+</tr>
+<tr>
+<td>留言工具列</td>
+<td>圓形箭嘴 — Refresh（重新整理）</td>
+<td>重新載入留言清單</td>
+</tr>
+</tbody>
+</table>
+<p>拖曳網站與留言之間的分隔線，可調整兩側面板的大小。</p>
+<h3 id="選取元素並撰寫意見">4. 選取元素並撰寫意見</h3>
+<ol type="1">
+<li>按留言工具列的 <strong>Start selecting</strong>（開始選取）。</li>
+<li>將滑鼠指標移至網站上，查看被標示的元素。</li>
+<li>按一下你想討論的元素。</li>
+<li>應用程式會擷取目前可見的網頁，並在右側開啟 <strong>Comment on this
+element</strong>（就此元素留言）面板。</li>
+<li>在 <strong>Your
+comment</strong>（你的留言）輸入清晰說明，例如「請縮短這個標題，讓讀者更容易掌握主要訊息。」</li>
+</ol>
+<figure>
+<img src="images/electron-new-comment.png"
+alt="Electron 應用程式中已選取的標題、擷取的截圖及留言草稿" />
+<figcaption aria-hidden="true">Electron
+應用程式中已選取的標題、擷取的截圖及留言草稿</figcaption>
+</figure>
+<p>按 <strong>Stop selecting</strong>（停止選取）或
+<strong>Escape</strong>，即可返回正常瀏覽模式。按草稿上標示為
+<strong>Cancel comment</strong>（取消留言）的 <strong>×</strong>
+可取消留言；如有未儲存的變更，須確認捨棄草稿。</p>
+<h3 id="標註截圖並儲存">5. 標註截圖並儲存</h3>
+<ol type="1">
+<li>提交前，按截圖上標示為 <strong>Edit
+screenshot</strong>（編輯截圖）的鉛筆圖示。</li>
+<li>選擇 <strong>Brush</strong>（畫筆）或
+<strong>Rectangle</strong>（矩形），再選擇繪圖顏色及線條粗幼。</li>
+<li>在截圖上拖曳以繪製標註。使用 <strong>Undo</strong>（復原）或
+<strong>Redo</strong>（重做）調整標註。</li>
+<li>按標示為 <strong>Save
+screenshot</strong>（儲存截圖）的磁碟圖示，套用修改。編輯器上標示為
+<strong>Cancel</strong>（取消）的 <strong>×</strong>
+會關閉編輯器，而不套用這次的修改。</li>
+<li>返回留言面板，按標示為 <strong>Save
+comment</strong>（儲存留言）的傳送箭嘴。</li>
+<li>等候 <strong>Comment
+saved</strong>（留言已儲存）訊息及已儲存的討論串出現。</li>
+</ol>
+<figure>
+<img src="images/electron-screenshot-editor.png"
+alt="截圖編輯器，顯示畫筆及矩形工具、顏色、線條粗幼、復原、重做及儲存按鈕" />
+<figcaption
+aria-hidden="true">截圖編輯器，顯示畫筆及矩形工具、顏色、線條粗幼、復原、重做及儲存按鈕</figcaption>
+</figure>
+<p><strong>截圖提交後便不能修改，管理員亦不例外。</strong>儲存前請檢查截圖及標註。截圖只涵蓋目前可見的網頁區域及主文件；元素選取不支援巢狀
+iframe 或 Shadow DOM 根節點。部分跨來源圖片、影片或 CSS
+效果在截圖中的顯示可能與網頁不同。</p>
+<p>如果儲存失敗，請保留草稿並再次按 <strong>Save
+comment</strong>。如果網頁已變更，導致草稿失效，請取消草稿並重新選取元素。</p>
+<h3 id="閱讀討論串及回覆">6. 閱讀討論串及回覆</h3>
+<ol type="1">
+<li>使用
+<strong>Hostname</strong>（主機名稱）、<strong>Show</strong>（顯示）及
+<strong>Sort</strong>（排序）篩選留言清單。</li>
+<li>選取討論串，查看截圖、元素詳細資料及對話。</li>
+<li>捲動至 <strong>Reply</strong>（回覆），輸入回覆，再按 <strong>Post
+reply</strong>（提交回覆）。</li>
+<li>按右上角標示為 <strong>Back to comments</strong>（返回留言清單）的
+<strong>×</strong>，返回清單。</li>
+</ol>
+<figure>
+<img src="images/electron-thread.png"
+alt="已儲存的 Electron 討論串，顯示截圖及網頁上被標示的元素" />
+<figcaption aria-hidden="true">已儲存的 Electron
+討論串，顯示截圖及網頁上被標示的元素</figcaption>
+</figure>
+<figure>
+<img src="images/electron-reply.png"
+alt="Electron 討論串捲動至對話及回覆欄位的畫面" />
+<figcaption aria-hidden="true">Electron
+討論串捲動至對話及回覆欄位的畫面</figcaption>
+</figure>
+<p>按 <strong>Highlight commented
+elements</strong>（標示已有留言的元素），標示目前網頁上有未封存討論串的元素。在被標示的元素上按滑鼠右鍵，即可開啟相關討論串。如果建立討論串後網站結構已改變，系統可能無法再找到對應元素。</p>
+<h3 id="封存或重新開啟討論串">7. 封存或重新開啟討論串</h3>
+<ol type="1">
+<li>開啟討論串。</li>
+<li>按詳細資料面板右上角標示為 <strong>Comment
+actions</strong>（留言操作）的 <strong>⋯</strong>。</li>
+<li>意見已處理後，選擇 <strong>Archive
+thread</strong>（封存討論串）。</li>
+</ol>
+<figure>
+<img src="images/electron-thread-actions.png"
+alt="Electron 留言操作選單，顯示封存討論串選項" />
+<figcaption aria-hidden="true">Electron
+留言操作選單，顯示封存討論串選項</figcaption>
+</figure>
+<p>如要重新開啟討論串，將 <strong>Show</strong> 設為
+<strong>Archived</strong>（已封存）或
+<strong>All</strong>（全部），選取討論串，再選擇 <strong>Comment actions
+→ Unarchive
+thread</strong>（取消封存討論串）。封存會保留截圖及對話，但在重新開啟前不能新增回覆。</p>
+<h3 id="匯出-html-報告">8. 匯出 HTML 報告</h3>
+<ol type="1">
+<li>設定 <strong>Hostname</strong>、<strong>Show</strong> 及
+<strong>Sort</strong> 篩選條件，選擇要包含的意見。</li>
+<li>按留言工具列的下載箭嘴 <strong>Export</strong>（匯出）。</li>
+<li>等候系統準備截圖，並顯示已匯出的留言數目。</li>
+<li>在瀏覽器開啟下載的 <code>html-review-YYYY-MM-DD.html</code>
+檔案。</li>
+</ol>
+<p>匯出會包含所有符合篩選條件的結果頁面，以及截圖和回覆。如要包含已處理的意見，請在匯出前選擇
+<strong>Show →
+All</strong>。報告包含審閱內容及截圖，請只與指定收件人分享。</p>
+<h2 id="疑難排解">疑難排解</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>問題</th>
+<th>處理方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>無法登入控制台</td>
+<td>向管理員核對伺服器網址、管理員用戶名稱及密碼。審閱者存取碼不能用作管理員登入。</td>
+</tr>
+<tr>
+<td>審閱者存取碼被拒絕</td>
+<td>向管理員核對存取碼及伺服器網址。存取碼可能已被撤銷。</td>
+</tr>
+<tr>
+<td>主機名稱未獲授權</td>
+<td>請管理員將確切的主機名稱加入你的存取碼，包括重新導向或登入使用的主機名稱。修改後重新開啟網頁。</td>
+</tr>
+<tr>
+<td>Start selecting 無法使用</td>
+<td>等候網站載入，查看狀態訊息，再按 Open page 重試。</td>
+</tr>
+<tr>
+<td>截圖擷取失敗</td>
+<td>按 Retry capture（重新擷取），或選取其他元素。</td>
+</tr>
+<tr>
+<td>草稿提示網頁已變更</td>
+<td>取消已失效的草稿，在目前網頁重新選取元素。</td>
+</tr>
+<tr>
+<td>留言或回覆無法儲存</td>
+<td>保留草稿，檢查網絡連線後重試。</td>
+</tr>
+<tr>
+<td>找不到討論串</td>
+<td>檢查 Hostname 及 Active / Archived / All 篩選條件，再重新整理。</td>
+</tr>
+<tr>
+<td>無法回覆</td>
+<td>檢查討論串是否已封存。取消封存後即可繼續討論。</td>
+</tr>
+<tr>
+<td>應用程式要求重新登入</td>
+<td>登入工作階段可能已到期，或存取碼已被撤銷。請重新登入或聯絡管理員。</td>
+</tr>
+<tr>
+<td>網站畫面中斷連線或當機</td>
+<td>按 Open page，重新載入網站並恢復連線。</td>
+</tr>
+</tbody>
+</table>
+</main>
+<footer>HTML Review · <a href="../../index.html">Downloads and setup</a> · <a href="https://github.com/devtalkbox/tbproducts-html-review-release">Public repository</a></footer>
+</body>
+</html>

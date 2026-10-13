@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download HTML Review for macOS, Windows, and Linux. Read illustrated guides for reviewing websites with comments and screenshots.">
+  <title>HTML Review — Downloads and user guides</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar"><div class="topbar-inner">
+    <a class="brand" href="index.html">HTML Review</a>
+    <nav aria-label="Main navigation">
+      <a href="#downloads">Downloads</a>
+      <a href="docs/wiki/User-Guide.html">User guide</a>
+      <a href="docs/wiki/User-Guide-zh-HK.html" lang="zh-HK">繁體中文</a>
+      <a href="https://html-review-206149277907.asia-east1.run.app/">Admin console</a>
+    </nav>
+  </div></header>
+  <main id="main">
+    <section class="hero" aria-labelledby="intro">
+      <div>
+        <p class="eyebrow">HTML Review · Desktop v1.0.1</p>
+        <h1 id="intro">Point to the element.<br>Share the feedback.</h1>
+        <p>Review websites with element comments, annotated screenshots, and replies. Keep the discussion beside the page, then export an HTML report.</p>
+        <a class="button" href="#downloads">Download HTML Review</a>
+        <p class="muted">macOS, Windows, and Linux · Public downloads</p>
+      </div>
+      <figure>
+        <img src="docs/wiki/images/electron-workspace.png" alt="HTML Review desktop showing a demo website beside its comment panel" width="1440" height="928">
+        <figcaption>The desktop workspace, using local demo data.</figcaption>
+      </figure>
+    </section>
+    <section id="downloads" aria-labelledby="download-title">
+      <h2 id="download-title">Download v1.0.1</h2>
+      <p>Choose your operating system and processor. No GitHub account is needed.</p>
+      <div class="downloads">
+        <div class="download"><p><strong>macOS Apple silicon</strong><span class="muted">M series Macs · DMG</span></p><p>Open the DMG and drag HTML Review into Applications.</p><a class="button" href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg">Download for M series</a></div>
+        <div class="download"><p><strong>macOS Intel</strong><span class="muted">Intel Macs · DMG</span></p><p>Open the DMG and drag HTML Review into Applications.</p><a class="button" href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.dmg">Download for Intel</a></div>
+        <div class="download"><p><strong>Windows portable</strong><span class="muted">x64 · Runnable EXE</span></p><p>Double-click to run. No installation needed; runtime files extract to a temporary folder.</p><a class="button" href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Portable.1.0.1-x64.exe">Download portable EXE</a></div>
+        <div class="download"><p><strong>Windows installer</strong><span class="muted">x64 · Setup EXE</span></p><p>Run setup, then open HTML Review.</p><a class="button" href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Setup.1.0.1-x64.exe">Download Windows setup</a></div>
+        <div class="download"><p><strong>Linux</strong><span class="muted">x64 · AppImage</span></p><p>Make the AppImage executable, then run it.</p><a class="button" href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.AppImage">Download AppImage</a></div>
+      </div>
+      <p class="muted"><a href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/SHA256SUMS.txt">SHA-256 checksums</a> · <a href="https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest">Latest release and release notes</a></p>
+    </section>
+    <div class="columns">
+      <section aria-labelledby="start-title">
+        <h2 id="start-title">Start reviewing</h2>
+        <ol>
+          <li>Open HTML Review. It connects to the hosted review server by default.</li>
+          <li>Sign in with your display name and the reviewer access code from your administrator.</li>
+          <li>Enter an authorized website URL and click <strong>Open page</strong>.</li>
+          <li>Click <strong>Start selecting</strong>, select an element, write your feedback, and save.</li>
+        </ol>
+        <p>Public downloads do not grant access to review data. Ask your administrator for an access code and authorized website hostnames.</p>
+      </section>
+      <section aria-labelledby="guide-title">
+        <h2 id="guide-title">Follow the illustrated guide</h2>
+        <p>Learn how to select elements, annotate screenshots, reply to threads, archive feedback, and export reports. Administrators can also find instructions for reviewer access codes.</p>
+        <p><a href="docs/wiki/User-Guide.html">Read the English guide →</a></p>
+        <p><a href="docs/wiki/User-Guide-zh-HK.html" lang="zh-HK">閱讀繁體中文使用指南 →</a></p>
+        <h3>On Linux</h3>
+        <pre><code>chmod +x HTML.Review-1.0.1-x64.AppImage
+./HTML.Review-1.0.1-x64.AppImage</code></pre>
+      </section>
+    </div>
+    <section aria-labelledby="support-title">
+      <h2 id="support-title">Before you launch</h2>
+      <p>macOS packages are ad-hoc signed and not notarized. Windows packages have no publisher certificate. Your operating system may show a security prompt.</p>
+      <p>Both Mac packages passed desktop integration checks; Intel was tested through Rosetta. Windows and Linux builds have not been run on their native operating systems.</p>
+      <p>The app needs a connection to the review server. Node.js and npm are not required. To use another server, follow the <a href="docs/wiki/User-Guide.html#launch-the-app">server connection instructions</a>.</p>
+    </section>
+  </main>
+  <footer>HTML Review · <a href="https://github.com/devtalkbox/tbproducts-html-review-release">Public repository</a> · <a href="https://github.com/devtalkbox/tbproducts-html-review-release/issues">Report an issue</a></footer>
+</body>
+</html>

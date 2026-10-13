@@ -4,6 +4,10 @@ Review websites with element comments, annotated screenshots, replies, and downl
 
 [Download the latest release](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [English user guide](docs/wiki/User-Guide.md) · [繁體中文使用指南](docs/wiki/User-Guide-zh-HK.md) · [Admin console](https://html-review-206149277907.asia-east1.run.app/)
 
+## HTML pages
+
+Open [index.html](index.html) in a browser for downloads and setup. Browser-readable illustrated guides are available in [English](docs/wiki/User-Guide.html) and [繁體中文](docs/wiki/User-Guide-zh-HK.html). Keep the HTML files, `styles.css`, and `docs/wiki/images/` together when downloading or hosting the pages.
+
 ## Download v1.0.1
 
 Downloads are public and do not require a GitHub account. Use the package matching your operating system and processor.
