@@ -1,6 +1,6 @@
 # HTML Review User Guide
 
-**Updated 13 October 2026 · Version 1.0.1**
+**Updated 15 October 2026 · Version 1.0.2**
 
 Use the **HTML Review desktop app** to browse a website, select an element, and post a comment with a screenshot. Saved threads and replies are shared with your team through the review server.
 
@@ -12,13 +12,13 @@ Choose the package matching your operating system and processor. Downloads are p
 
 | Platform | Direct download |
 | --- | --- |
-| macOS Apple silicon (M series) | [HTML.Review-1.0.1-arm64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg) |
-| macOS Intel | [HTML.Review-1.0.1-x64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.dmg) |
-| Windows x64 portable — no installation | [HTML.Review.Portable.1.0.1-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Portable.1.0.1-x64.exe) |
-| Windows x64 installer | [HTML.Review.Setup.1.0.1-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Setup.1.0.1-x64.exe) |
-| Linux x64 | [HTML.Review-1.0.1-x64.AppImage](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.AppImage) |
+| macOS Apple silicon (M series) | [HTML.Review-1.0.2-arm64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-arm64.dmg) |
+| macOS Intel | [HTML.Review-1.0.2-x64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-x64.dmg) |
+| Windows x64 portable — no installation | [HTML.Review.Portable.1.0.2-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review.Portable.1.0.2-x64.exe) |
+| Windows x64 installer | [HTML.Review.Setup.1.0.2-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review.Setup.1.0.2-x64.exe) |
+| Linux x64 | [HTML.Review-1.0.2-x64.AppImage](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-x64.AppImage) |
 
-[Latest release](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [SHA-256 checksums](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/SHA256SUMS.txt)
+[Latest release](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [SHA-256 checksums](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/SHA256SUMS.txt)
 
 ## Before you begin
 
@@ -35,16 +35,16 @@ Download the package for your operating system from the [latest public release](
 | Platform | Launch |
 | --- | --- |
 | macOS Apple silicon or Intel | Open the matching DMG, drag **HTML Review** into **Applications**, then open it. |
-| Windows x64 portable | Double-click `HTML.Review.Portable.1.0.1-x64.exe`. No installation is needed; runtime files extract to a temporary folder. |
-| Windows x64 installer | Run `HTML.Review.Setup.1.0.1-x64.exe`, then open **HTML Review**. |
+| Windows x64 portable | Double-click `HTML.Review.Portable.1.0.2-x64.exe`. No installation is needed; runtime files extract to a temporary folder. |
+| Windows x64 installer | Run `HTML.Review.Setup.1.0.2-x64.exe`, then open **HTML Review**. |
 | Linux x64 | Make the AppImage executable and run it, as shown below. |
 
 ```sh
-chmod +x HTML.Review-1.0.1-x64.AppImage
-./HTML.Review-1.0.1-x64.AppImage
+chmod +x HTML.Review-1.0.2-x64.AppImage
+./HTML.Review-1.0.2-x64.AppImage
 ```
 
-Version 1.0.1 connects to the configured review server by default. You do not need Node.js, npm, or a command-line server argument. Ask your administrator for a reviewer access code.
+Version 1.0.2 connects to the configured review server by default. You do not need Node.js, npm, or a command-line server argument. Ask your administrator for a reviewer access code.
 
 macOS packages are ad-hoc signed and not notarized; Windows packages have no publisher certificate. Your operating system may show a security prompt. Windows and Linux builds have not been tested on their native operating systems.
 
@@ -57,7 +57,7 @@ open -a "HTML Review" --args --server https://YOUR_REVIEW_SERVER
 For the Windows portable app in PowerShell:
 
 ```powershell
-.\HTML.Review.Portable.1.0.1-x64.exe --server https://YOUR_REVIEW_SERVER
+.\HTML.Review.Portable.1.0.2-x64.exe --server https://YOUR_REVIEW_SERVER
 ```
 
 The server URL must be an HTTPS origin, or an HTTP loopback origin for local development, without credentials, a path, query, or fragment. See the [download and setup README](../../README.md) for packages and checksums.

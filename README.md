@@ -8,30 +8,30 @@ Review websites with element comments, annotated screenshots, replies, and downl
 
 Open [index.html](index.html) in a browser for downloads and setup. Browser-readable illustrated guides are available in [English](docs/wiki/User-Guide.html) and [繁體中文](docs/wiki/User-Guide-zh-HK.html). Keep the HTML files, `styles.css`, and `docs/wiki/images/` together when downloading or hosting the pages.
 
-## Download v1.0.1
+## Download v1.0.2
 
 Downloads are public and do not require a GitHub account. Use the package matching your operating system and processor.
 
 | Platform | Download | Setup |
 | --- | --- | --- |
-| macOS Apple silicon (M series) | [DMG](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg) | Open the DMG and drag HTML Review into Applications. |
-| macOS Intel | [DMG](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.dmg) | Open the DMG and drag HTML Review into Applications. |
-| Windows x64 — portable | [Runnable EXE](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Portable.1.0.1-x64.exe) | Double-click to run. No installation required. |
-| Windows x64 — installer | [Setup EXE](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Setup.1.0.1-x64.exe) | Run setup, then open HTML Review. |
-| Linux x64 | [AppImage](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.AppImage) | Make executable, then run. |
+| macOS Apple silicon (M series) | [DMG](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-arm64.dmg) | Open the DMG and drag HTML Review into Applications. |
+| macOS Intel | [DMG](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-x64.dmg) | Open the DMG and drag HTML Review into Applications. |
+| Windows x64 — portable | [Runnable EXE](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review.Portable.1.0.2-x64.exe) | Double-click to run. No installation required. |
+| Windows x64 — installer | [Setup EXE](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review.Setup.1.0.2-x64.exe) | Run setup, then open HTML Review. |
+| Linux x64 | [AppImage](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-x64.AppImage) | Make executable, then run. |
 
 For Linux:
 
 ```sh
-chmod +x HTML.Review-1.0.1-x64.AppImage
-./HTML.Review-1.0.1-x64.AppImage
+chmod +x HTML.Review-1.0.2-x64.AppImage
+./HTML.Review-1.0.2-x64.AppImage
 ```
 
 The Windows portable EXE extracts runtime files to a temporary folder when launched. Reviewer sessions and website cookies are stored in your user profile.
 
 ## Start reviewing
 
-1. Open HTML Review. Version 1.0.1 connects to the configured review server by default.
+1. Open HTML Review. Version 1.0.2 connects to the configured review server by default.
 2. Enter your display name and the reviewer access code supplied by your administrator, then click **Sign in**.
 3. Enter an authorized website URL and click **Open page**.
 4. Click **Start selecting**, then click the element you want to discuss.
@@ -58,23 +58,23 @@ open -a "HTML Review" --args --server https://YOUR_REVIEW_SERVER
 For the Windows portable app in PowerShell:
 
 ```powershell
-.\HTML.Review.Portable.1.0.1-x64.exe --server https://YOUR_REVIEW_SERVER
+.\HTML.Review.Portable.1.0.2-x64.exe --server https://YOUR_REVIEW_SERVER
 ```
 
 Use an HTTPS origin, or an HTTP loopback origin for local development, without credentials, a path, query, or fragment.
 
 ## Package verification and support
 
-[SHA256SUMS.txt](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/SHA256SUMS.txt) contains checksums for all five app packages. Compare a downloaded file's SHA-256 hash with its entry:
+[SHA256SUMS.txt](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/SHA256SUMS.txt) contains checksums for all five app packages. Compare a downloaded file's SHA-256 hash with its entry:
 
 ```sh
 # macOS example
-shasum -a 256 HTML.Review-1.0.1-arm64.dmg
+shasum -a 256 HTML.Review-1.0.2-arm64.dmg
 ```
 
 ```powershell
 # Windows portable example
-Get-FileHash .\HTML.Review.Portable.1.0.1-x64.exe -Algorithm SHA256
+Get-FileHash .\HTML.Review.Portable.1.0.2-x64.exe -Algorithm SHA256
 ```
 
 Both Mac packages passed desktop integration checks; the Intel package was tested through Rosetta on Apple silicon. Windows and Linux packages were cross-built and have not been run on their native operating systems.

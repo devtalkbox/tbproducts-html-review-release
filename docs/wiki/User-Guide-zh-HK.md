@@ -1,6 +1,6 @@
 # HTML Review 使用指南
 
-**更新日期：2026 年 10 月 13 日 · 版本 1.0.1**
+**更新日期：2026 年 10 月 15 日 · 版本 1.0.2**
 
 使用 **HTML Review 桌面應用程式**瀏覽網站、選取網頁元素，並附上截圖提交留言。已儲存的討論串及回覆會透過審閱伺服器與隊友同步。
 
@@ -12,13 +12,13 @@
 
 | 平台 | 直接下載 |
 | --- | --- |
-| macOS Apple silicon（M 系列） | [HTML.Review-1.0.1-arm64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-arm64.dmg) |
-| macOS Intel | [HTML.Review-1.0.1-x64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.dmg) |
-| Windows x64 可攜式版本 — 毋須安裝 | [HTML.Review.Portable.1.0.1-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Portable.1.0.1-x64.exe) |
-| Windows x64 安裝程式 | [HTML.Review.Setup.1.0.1-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review.Setup.1.0.1-x64.exe) |
-| Linux x64 | [HTML.Review-1.0.1-x64.AppImage](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/HTML.Review-1.0.1-x64.AppImage) |
+| macOS Apple silicon（M 系列） | [HTML.Review-1.0.2-arm64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-arm64.dmg) |
+| macOS Intel | [HTML.Review-1.0.2-x64.dmg](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-x64.dmg) |
+| Windows x64 可攜式版本 — 毋須安裝 | [HTML.Review.Portable.1.0.2-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review.Portable.1.0.2-x64.exe) |
+| Windows x64 安裝程式 | [HTML.Review.Setup.1.0.2-x64.exe](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review.Setup.1.0.2-x64.exe) |
+| Linux x64 | [HTML.Review-1.0.2-x64.AppImage](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/HTML.Review-1.0.2-x64.AppImage) |
 
-[最新版本](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [SHA-256 校驗碼](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.1/SHA256SUMS.txt)
+[最新版本](https://github.com/devtalkbox/tbproducts-html-review-release/releases/latest) · [SHA-256 校驗碼](https://github.com/devtalkbox/tbproducts-html-review-release/releases/download/v1.0.2/SHA256SUMS.txt)
 
 ## 開始前的準備
 
@@ -35,16 +35,16 @@
 | 平台 | 啟動方式 |
 | --- | --- |
 | macOS Apple silicon 或 Intel | 開啟相應的 DMG，將 **HTML Review** 拖曳至 **Applications**（應用程式），然後開啟。 |
-| Windows x64 可攜式版本 | 按兩下 `HTML.Review.Portable.1.0.1-x64.exe`，毋須安裝；執行時會將所需檔案解壓至暫存資料夾。 |
-| Windows x64 安裝程式 | 執行 `HTML.Review.Setup.1.0.1-x64.exe`，完成後開啟 **HTML Review**。 |
+| Windows x64 可攜式版本 | 按兩下 `HTML.Review.Portable.1.0.2-x64.exe`，毋須安裝；執行時會將所需檔案解壓至暫存資料夾。 |
+| Windows x64 安裝程式 | 執行 `HTML.Review.Setup.1.0.2-x64.exe`，完成後開啟 **HTML Review**。 |
 | Linux x64 | 按以下指令將 AppImage 設為可執行並啟動。 |
 
 ```sh
-chmod +x HTML.Review-1.0.1-x64.AppImage
-./HTML.Review-1.0.1-x64.AppImage
+chmod +x HTML.Review-1.0.2-x64.AppImage
+./HTML.Review-1.0.2-x64.AppImage
 ```
 
-1.0.1 版本預設連接已設定的審閱伺服器，毋須安裝 Node.js、npm 或透過指令指定伺服器。請向管理員索取審閱者存取碼。
+1.0.2 版本預設連接已設定的審閱伺服器，毋須安裝 Node.js、npm 或透過指令指定伺服器。請向管理員索取審閱者存取碼。
 
 macOS 套件使用 ad-hoc 簽署，未經 Apple 公證；Windows 套件沒有發行者憑證。作業系統可能顯示安全提示。Windows 及 Linux 版本尚未在各自的作業系統上測試。
 
@@ -57,7 +57,7 @@ open -a "HTML Review" --args --server https://YOUR_REVIEW_SERVER
 Windows 可攜式版本可於 PowerShell 使用：
 
 ```powershell
-.\HTML.Review.Portable.1.0.1-x64.exe --server https://YOUR_REVIEW_SERVER
+.\HTML.Review.Portable.1.0.2-x64.exe --server https://YOUR_REVIEW_SERVER
 ```
 
 伺服器網址必須使用 HTTPS；本機開發亦可使用 HTTP 回送位址（loopback）。網址不可包含帳戶資料、路徑、查詢參數或片段識別碼。套件及校驗碼詳情請參閱[下載及設定 README](../../README.md)。
